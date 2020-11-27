@@ -1,0 +1,58 @@
+print("Welcome to my first game! ")
+name = input("What is your name? ")
+age = int(input("What is your age? "))
+
+health = 20
+
+if age >= 16:
+   print("You are old enough to play! ")
+
+if age <= 16:
+  print("You are not allowed to play...")
+
+wants_to_play = input("Do you want to play? ").lower()
+if wants_to_play == "yes":
+   
+   print("You are starting with ", health,"health")
+print("Let's play!") 
+    
+
+  
+left_or_right = input("First choice....Left or Right  (left/right)?) ")
+if left_or_right == "left":
+       ans = input("Nice, you follow the path and reach a lake.... Do you swim  across or go around (across/around)? ")
+
+if left_or_right == "right":
+  ans = input("You fell down and lost...")
+       
+if ans == "around":
+         print("You went around and reached the other side of the lake")
+         
+elif ans == "across":
+           print("You managed to get across, but were bit by a fish and lost 5 health. ")
+           health  -= 5
+
+ans = input("You notice a house and a river, which do you go to(river/house))? ")
+if ans == "house":
+  print("You go to the house and are greeted by the owner... He does not like you and you lose 5 health")
+  health -= 5
+
+elif ans == "river":
+  print("You narrowly managed to cross the river and were stung by a jellyfish...You lost 10 health")
+  health -= 10
+
+  ans = input("You reach a forest and begin walking through it. You hear large footsteps approaching, although a mini earthquake is happening. A wild bear appears behind you. What do you do(play dead/run)? ")
+  if ans == "play dead":
+    print("The bear sniffs you and then passes you by.")
+
+  elif ans == "run":
+    print("The bear chases you until you arrive at a narrow bridge. The bear watches you and then turns away.")
+
+  if health <= 0:
+    print("You now have 0 health and you lost the game...")
+  else:
+    print("You have survived....You win!!!")
+else:
+  print("You fell in the river and lost....")
+
+
